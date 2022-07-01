@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
+
+    //relations
+    public function divisions()
+    {
+        $this->belongsToMany(Division::class);
+    }
 }
