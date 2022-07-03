@@ -18,9 +18,8 @@ class DivisionEmployeeSeeder extends Seeder
     public function run()
     {
         $division = Division::first();
-        $employees = Employee::all();
-        // $firstEmployee = Employee::find(7);
-        // $division->employees()->attach($firstEmployee);
+        $notEmployees = $division->notEmployees()->get()->random(5);
+        $division->employees()->attach($notEmployees);
 
         // dd($division->employees);
         dd($division->leaderEmployee);

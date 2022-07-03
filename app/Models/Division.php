@@ -24,4 +24,13 @@ class Division extends Model
     {
         return $this->hasMany(Department::class);
     }
+
+    //boolean
+    public function notEmployees()
+    {
+        return Employee::leftJoin('division_employees' , 'division_employees.employee_id', '=', 'employees.id')
+        ->select("employees.*")
+        ->where("division_employees.division_id", "!=", $this->id)
+        ->orWhere("division_employees.division_id", null);
+    }
 }
