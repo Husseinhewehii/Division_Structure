@@ -17,8 +17,6 @@ class DivisionEmployeeSeeder extends Seeder
      */
     public function run()
     {
-        $division = Division::first();
-        $notEmployees = $division->notEmployees()->get()->random(5);
-        $division->employees()->attach($notEmployees);
+        seed_organization_with_employees(Division::class);
     }
 }

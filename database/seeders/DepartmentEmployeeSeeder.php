@@ -15,8 +15,6 @@ class DepartmentEmployeeSeeder extends Seeder
      */
     public function run()
     {
-        $department = Department::first();
-        $notEmployees = $department->notEmployees()->get()->random(5);
-        $department->employees()->attach($notEmployees);
+        seed_organization_with_employees(Department::class);
     }
 }

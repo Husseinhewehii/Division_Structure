@@ -15,8 +15,6 @@ class TeamEmployeeSeeder extends Seeder
      */
     public function run()
     {
-        $team = Team::first();
-        $notEmployees = $team->notEmployees()->get()->random(5);
-        $team->employees()->attach($notEmployees);
+        seed_organization_with_employees(Team::class);
     }
 }
