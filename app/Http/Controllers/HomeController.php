@@ -2,24 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Department;
-use App\Models\Division;
-use App\Models\Employee;
-use App\Models\Team;
+use App\Repositories\Division\DivisionRepositoryInterface;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+   
+    public function __construct(
+        public DivisionRepositoryInterface $divisionRepository,
+    ){}
+    
     public function index()
     {
-        // $division = Division::first();
-        // dump($division->notEmployees()->first());
-
-        // $department = Department::first();
-        // dump($department->employees);
-
-        $team = Team::first();
-        dump($team->employees);
+        $divs = $this->divisionRepository->getDivisions();
+        dump($divs);
         return view('home');
     }
 }
