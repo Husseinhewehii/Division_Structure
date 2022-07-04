@@ -24,130 +24,83 @@
                                 <td class="department admin">
                                 <div class="company">
                                     <form>
-                                    <p>{{$division->leaderEmployee->name}}</p><span>&nbsp; Division Lead</span>
+                                    <p>{{$division->leaderEmployee->fullName}}</p><span>&nbsp; Division Lead</span>
                                     </form>
                                 </div>
                                 </td>
 
-                                <td class="department show ">
-                                <div class="company">
-                                    <form>Division Employee
-                                    <input type="text" value="Employee Four" readonly>
-                                    </form>
-                                </div>
-                                </td>
-                                <td class="department show">
-                                <div class="company">
-                                    <form>Division Employee
-                                    <input type="text" value="Employee Seven" readonly>
-                                    </form>
-                                </div>
-                                </td>
-                                <!-- start department-->
-                                <td class="department show">
-                                <div class="company">
-                                    <form>Department
-                                    <input type="text" value="Zurich" readonly>
-                                    </form>
-                                </div>
-                                </td>
-                                <!-- end department-->
+                                @foreach ($division->employees as $employee)
+                                    <td class="department show ">
+                                        <div class="company">
+                                            <form>Division Employee
+                                            <input type="text" value="{{$employee->fullName}}" readonly>
+                                            </form>
+                                        </div>
+                                    </td>
+                                @endforeach
 
-                                <!-- start teams-->
-                                <td class="teams show">
-                                <div class="department admin">
-                                    <div class="company">
-                                    <form>
-                                        <p>Employee Five</p><span>&nbsp; Department Lead</span>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team show">
-                                    <div class="company">
-                                    <form>Department Employee
-                                        <input type="text" value="Employee Six" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team show">
-                                    <div class="company">
-                                    <form>Department Employee
-                                        <input type="text" value="Employee Nine" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team show">
-                                    <div class="company">
-                                    <form>Team
-                                        <input type="text" value="Sales ZU" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team show">
-                                    <div class="company">
-                                    <form>
-                                        <p>Employee Ten</p><span>&nbsp; Team Lead</span>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team show">
-                                    <div class="company">
-                                    <form>Team Employee
-                                        <input type="text" value="Employee One" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team show">
-                                    <div class="company">
-                                    <form>Team Employee
-                                        <input type="text" value="Employee Twelve" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team show">
-                                    <div class="company">
-                                    <form>Team Employee
-                                        <input type="text" value="Employee Thirteen" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team show">
-                                    <div class="company">
-                                    <form>Team
-                                        <input type="text" value="Marketing ZU" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team">
-                                    <div class="company">
-                                    <form>
-                                        <p>Employee Two</p><span>&nbsp; Team Lead</span>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team">
-                                    <div class="company">
-                                    <form>Team Employee
-                                        <input type="text" value="Employee Three" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team">
-                                    <div class="company">
-                                    <form>Team Employee
-                                        <input type="text" value="Employee Seven" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                <div class="team">
-                                    <div class="company">
-                                    <form>Team Employee
-                                        <input type="text" value="Employee Eight" readonly>
-                                    </form>
-                                    </div>
-                                </div>
-                                </td>
-                                <!-- end teams-->
+                                @foreach ($division->departments as $department)
+                                    <!-- start department-->
+                                        <td class="department show">
+                                            <div class="company">
+                                                <form>Department
+                                                <input type="text" value="{{$department->name}}" readonly>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    <!-- end department-->
+                                
+
+                                    <!-- start teams-->
+                                    <td class="teams show">
+                                            <div class="department admin">
+                                                <div class="company">
+                                                <form>
+                                                    <p>{{$department->leaderEmployee->fullName}}</p><span>&nbsp; Department Lead</span>
+                                                </form>
+                                                </div>
+                                            </div>
+                                            @foreach ($department->employees as $departmentEmployee)
+                                                <div class="team show">
+                                                    <div class="company">
+                                                    <form>Department Employee
+                                                        <input type="text" value="{{$departmentEmployee->fullName}}" readonly>
+                                                    </form>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+
+                                            @foreach ($department->teams as $team)
+                                                <div class="team show">
+                                                    <div class="company">
+                                                    <form>Team
+                                                        <input type="text" value="{{$team->name}}" readonly>
+                                                    </form>
+                                                    </div>
+                                                </div>
+
+                                                <div class="team">
+                                                    <div class="company">
+                                                    <form>
+                                                        <p>{{$team->leaderEmployee->fullName}}</p><span>&nbsp; Team Lead</span>
+                                                    </form>
+                                                    </div>
+                                                </div>
+                                            
+                                                @foreach ($team->employees as $teamEmployee)
+                                                    <div class="team">
+                                                        <div class="company">
+                                                        <form>Team Employee
+                                                            <input type="text" value="{{$teamEmployee->fullName}}" readonly>
+                                                        </form>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                           
+                                            @endforeach
+                                    </td>
+                                    <!-- end teams-->
+                                @endforeach
                             </tr>
                             <!-- end division-->
                     @endforeach

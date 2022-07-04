@@ -12,4 +12,11 @@ class Department extends Model
 
     private static $employees_relation_table = 'department_employees';
     private static $pivot_key = 'department_id';
+
+    //relations
+    public function teams()
+    {
+        return $this->hasMany(Team::class);
+    }
+
 }

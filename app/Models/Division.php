@@ -17,8 +17,5 @@ class Division extends Model
     public function departments()
     {
         return $this->hasMany(Department::class);
-    }
-
-    //boolean
-    
+    }    
 }
