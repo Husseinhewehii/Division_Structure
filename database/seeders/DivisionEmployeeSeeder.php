@@ -20,8 +20,5 @@ class DivisionEmployeeSeeder extends Seeder
         $division = Division::first();
         $notEmployees = $division->notEmployees()->get()->random(5);
         $division->employees()->attach($notEmployees);
-
-        // dd($division->employees);
-        dd($division->leaderEmployee);
     }
 }
