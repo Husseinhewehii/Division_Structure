@@ -14,8 +14,8 @@ class HomeController extends Controller
     
     public function index()
     {
-        $divs = $this->divisionRepository->getDivisions();
-        dump($divs);
-        return view('home');
+        $divisions = $this->divisionRepository->getDivisions();
+        // dump($divisions);
+        return view('home', ["divisions" => $divisions]);
     }
 }
