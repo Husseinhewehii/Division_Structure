@@ -80,23 +80,23 @@ cd Independesk_task
 docker-compose up -d
 ```
 
-* independesk_task database will created automatically with credentials in .env file
+> independesk_task database will created automatically with credentials in .env file
 
 
 > 2 options for data:
 * Option 1: Import independesk_task.sql to Database
-#### open phpmyadmin
+##### open phpmyadmin
 ``` bash
 http://localhost:8081/
 ```
 
 * Option 2: Use Laravel Seeder
-#### Open Application Bash
+##### Open Application Bash
 
 ``` bash
 docker-compose exec app bash
 ```
-#### seed
+##### seed
 ``` bash
 php artisan db:seed
 ```
@@ -149,7 +149,7 @@ composer install
 > Create independesk_task database
 
 
-#### You have 2 options for data:
+> 2 options for data:
 * Option 1: Import independesk_task.sql to Database
 * Option 2: Use Laravel Seeder
 ``` bash
