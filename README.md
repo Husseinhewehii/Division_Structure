@@ -110,7 +110,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-##### in one command
+### OR
 ``` bash
 php artisan migrate --seed
 ```
@@ -170,7 +170,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-##### in one command
+### OR
 ``` bash
 php artisan migrate --seed
 ```
