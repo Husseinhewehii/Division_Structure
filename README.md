@@ -83,6 +83,18 @@ cd Independesk_task
 docker-compose up -d
 ```
 
+>> Install Composer Packages
+
+##### Open Application Bash
+
+``` bash
+docker-compose exec app bash
+```
+
+``` bash
+composer install
+```
+
 >> independesk_task database will created automatically with credentials in .env file
 
 
