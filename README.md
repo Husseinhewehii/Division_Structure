@@ -32,31 +32,34 @@ A Web Page Application That Represents Organizations' Structure Including (Divis
 
 ### Back-End
 
-- **[PHP 7.4](https://www.php.net/docs.php)**
-- **[Laravel 8](https://laravel.com/docs/8.x/installation)**
+- **[PHP 8](https://www.php.net/docs.php)**
+- **[Laravel 9](https://laravel.com/docs/9.x/installation)**
 
 ### Front-End
 
 - **HTML**
 - **CSS**
-- **[Bootstrap 5](https://getbootstrap.com/)**
-- **[JavaScript](https://www.javascript.com/)**
-- **[VueJs 3](https://vuejs.org/)**
-- **[Vuex](https://vuex.vuejs.org/)**
 
 ### Database
 
-- **[SQLite](https://www.sqlite.org/docs.html)**
+- **[MySql](https://www.mysql.com/)**
+
+### DevOps
+
+- **[Docker](https://www.docker.com/)**
 
 
 ## Prerequisites
 
-- **[PHP >= 7.3](https://www.php.net/downloads.php)**
+ # Option 1 (Containerization):
+- **[Docker](https://docs.docker.com/engine/install/)**
+
+ # Option 2 (Machine Environment):
+- **[PHP >= 8.0](https://www.php.net/downloads.php)**
 - **[Composer](https://getcomposer.org/)**
-- **[Node](https://nodejs.org/en/download/)**
 
 
-## Installation
+## Option 2 Installation
 
 
 > Download Project 
