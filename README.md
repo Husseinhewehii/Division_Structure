@@ -65,13 +65,14 @@ A Web Page Application That Represents Organizations' Structure Including (Divis
 > Download Project 
 
 ``` bash
-git clone https://github.com/Husseinhewehii/PhoneNumber.git
+https: git clone https://github.com/Husseinhewehii/Independesk_task.git
+ssh: git clone git@github.com:Husseinhewehii/Independesk_task.git
 ```
 
 > Move To Project Directory
 
 ``` bash
-cd PhoneNumber
+cd git@github.com:Husseinhewehii/Independesk_task.git
 ```
 
 > Install Composer Packages
@@ -80,65 +81,13 @@ cd PhoneNumber
 composer install
 ```
 
-> Install Node Packages
-
-``` bash
-npm install
-```
-
-> Compile Node Packages
-
-``` bash
-npm run dev
-```
-
-> Create .env file
-
-``` bash
-cp .env.example .env
-```
-
-> Generate Key
-
-``` bash
-php artisan key:generate
-```
-
-> Create .env.testing file
-
-``` bash
-cp .env .env.testing
-```
-
-> Configure .env file
-
-``` bash
-APP_URL=http://localhost:8000
-MIX_APP_URL="${APP_URL}"
-
-DB_CONNECTION=sqlite
-#DB_HOST=127.0.0.1
-#DB_PORT=3306
-#DB_DATABASE=laravel
-#DB_USERNAME=root
-#DB_PASSWORD=
-```
-
-> Configure .env.testing file
-
-``` bash
-DB_CONNECTION=sqlite
-#DB_HOST=127.0.0.1
-#DB_PORT=3306
-DB_DATABASE=testing_database
-#DB_USERNAME=root
-#DB_PASSWORD=
-```
+> Create independesk_task database
 
 
-> You Don't Need to Create Or Migrate Database Cause I allowed the Database files to be uploaded to Github
-but you can seed. 
-
+You have 2 options for data:
+> Import independesk_task.sql to Database
+Or
+> Use Laravel Seeder
 ``` bash
 php artisan db:seed
 ```
