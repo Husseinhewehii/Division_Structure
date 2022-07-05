@@ -49,10 +49,13 @@ A Web Page Application That Represents Organizations' Structure Including (Divis
 - **[Docker](https://www.docker.com/)**
 
 
-## Prerequisites
-
+## Installation Prerequisites
  ### Option 1 (Containerization):
 - **[Docker](https://docs.docker.com/engine/install/)**
+
+ ### Option 2 (Machine Environment):
+- **[PHP >= 8.1](https://www.php.net/downloads.php)**
+- **[Composer](https://getcomposer.org/)**
 
 
 ## Option 1 Installation
@@ -117,12 +120,6 @@ php artisan migrate --seed
 ``` bash
 http://localhost:8080/
 ```
-
-
- ### Option 2 (Machine Environment):
-- **[PHP >= 8.1](https://www.php.net/downloads.php)**
-- **[Composer](https://getcomposer.org/)**
-
 
 ## Option 2 Installation
 
