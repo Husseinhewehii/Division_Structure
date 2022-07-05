@@ -8,10 +8,10 @@ class DivisionRepositoryEloquent implements DivisionRepositoryInterface
 {
     public function getDivisions()
     {   
-        return Division::with(
+        return Division::with([
             'leaderEmployee', 'employees',
-            'departments', 'departments.leaderEmployee', 'departments.employees',
-            'departments.teams', 'departments.teams.leaderEmployee', 'departments.teams.employees'
-            )->get();
+            'departments' => ['leaderEmployee', 'employees'], 
+            'departments.teams' => ['leaderEmployee', 'employees']
+            ])->get();
     }
 }
