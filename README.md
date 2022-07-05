@@ -96,9 +96,20 @@ http://localhost:8081/
 ``` bash
 docker-compose exec app bash
 ```
+
+##### migrate database
+``` bash
+php artisan migrate
+```
+
 ##### seed
 ``` bash
 php artisan db:seed
+```
+
+##### in one command
+``` bash
+php artisan migrate --seed
 ```
 
 >> Run On Local Machine
@@ -152,8 +163,19 @@ composer install
 >> 2 options for data:
 * Option 1: Import independesk_task.sql to Database
 * Option 2: Use Laravel Seeder
+##### migrate database
+``` bash
+php artisan migrate
+```
+
+##### seed
 ``` bash
 php artisan db:seed
+```
+
+##### in one command
+``` bash
+php artisan migrate --seed
 ```
 
 >> Run On Local Machine
