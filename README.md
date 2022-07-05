@@ -58,7 +58,7 @@ A Web Page Application That Represents Organizations' Structure Including (Divis
 ## Option 1 Installation
 
 
-> Download Project 
+>> Download Project 
 
 * https:
 ``` bash
@@ -69,21 +69,21 @@ git clone https://github.com/Husseinhewehii/Independesk_task.git
 git clone git@github.com:Husseinhewehii/Independesk_task.git
 ```
 
-> Move To Project Directory
+>> Move To Project Directory
 
 ``` bash
 cd Independesk_task
 ```
 
-> Download Images and Run Containers In Background (presuming linux)
+>> Download Images and Run Containers In Background (presuming linux)
 ``` bash
 docker-compose up -d
 ```
 
-> independesk_task database will created automatically with credentials in .env file
+>> independesk_task database will created automatically with credentials in .env file
 
 
-> 2 options for data:
+>> 2 options for data:
 * Option 1: Import independesk_task.sql to Database
 ##### open phpmyadmin
 ``` bash
@@ -101,7 +101,7 @@ docker-compose exec app bash
 php artisan db:seed
 ```
 
-> Run On Local Machine
+>> Run On Local Machine
 
 ``` bash
 http://localhost:8080/
@@ -109,14 +109,14 @@ http://localhost:8080/
 
 
  ### Option 2 (Machine Environment):
-- **[PHP >= 8.0](https://www.php.net/downloads.php)**
+- **[PHP >>= 8.0](https://www.php.net/downloads.php)**
 - **[Composer](https://getcomposer.org/)**
 
 
 ## Option 2 Installation
 
 
->>> Download Project 
+>> Download Project 
 
 * https:
 ``` bash
@@ -133,30 +133,30 @@ git clone git@github.com:Husseinhewehii/Independesk_task.git
     cd Independesk_task
 ```
 
-> Update .env Database Credentials
+>> Update .env Database Credentials
 
 ``` bash
     change DB_HOST=db to DB_HOST=127.0.0.1
     change DB_USERNAME & DB_PASSWORD to yours
 ```
 
-> Install Composer Packages
+>> Install Composer Packages
 
 ``` bash
 composer install
 ```
 
-> Create independesk_task database
+>> Create independesk_task database
 
 
-> 2 options for data:
+>> 2 options for data:
 * Option 1: Import independesk_task.sql to Database
 * Option 2: Use Laravel Seeder
 ``` bash
 php artisan db:seed
 ```
 
-> Run On Local Machine
+>> Run On Local Machine
 
 ``` bash
 php artisan serve
