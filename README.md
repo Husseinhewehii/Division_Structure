@@ -51,10 +51,10 @@ A Web Page Application That Represents Organizations' Structure Including (Divis
 
 ## Prerequisites
 
- # Option 1 (Containerization):
+ ### Option 1 (Containerization):
 - **[Docker](https://docs.docker.com/engine/install/)**
 
- # Option 2 (Machine Environment):
+ ### Option 2 (Machine Environment):
 - **[PHP >= 8.0](https://www.php.net/downloads.php)**
 - **[Composer](https://getcomposer.org/)**
 
@@ -88,7 +88,7 @@ composer install
 > Create independesk_task database
 
 
-# You have 2 options for data:
+#### You have 2 options for data:
 * Option 1: Import independesk_task.sql to Database
 * Option 2: Use Laravel Seeder
 ``` bash
