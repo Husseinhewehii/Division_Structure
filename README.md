@@ -109,7 +109,7 @@ http://localhost:8080/
 
 
  ### Option 2 (Machine Environment):
-- **[PHP >>= 8.0](https://www.php.net/downloads.php)**
+- **[PHP >= 8.1](https://www.php.net/downloads.php)**
 - **[Composer](https://getcomposer.org/)**
 
 
