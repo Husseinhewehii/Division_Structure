@@ -116,7 +116,7 @@ http://localhost:8080/
 ## Option 2 Installation
 
 
-> Download Project 
+>>> Download Project 
 
 * https:
 ``` bash
@@ -127,7 +127,7 @@ git clone https://github.com/Husseinhewehii/Independesk_task.git
 git clone git@github.com:Husseinhewehii/Independesk_task.git
 ```
 
-> Move To Project Directory
+>> Move To Project Directory
 
 ``` bash
     cd Independesk_task
