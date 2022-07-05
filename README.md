@@ -64,8 +64,12 @@ A Web Page Application That Represents Organizations' Structure Including (Divis
 
 > Download Project 
 
+https:
 ``` bash
-https: git clone https://github.com/Husseinhewehii/Independesk_task.git
+git clone https://github.com/Husseinhewehii/Independesk_task.git
+```
+ssh:
+``` bash
 ssh: git clone git@github.com:Husseinhewehii/Independesk_task.git
 ```
 
@@ -84,7 +88,7 @@ composer install
 > Create independesk_task database
 
 
-You have 2 options for data:
+* You have 2 options for data:
 > Import independesk_task.sql to Database
 Or
 > Use Laravel Seeder
