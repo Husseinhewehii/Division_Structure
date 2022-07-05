@@ -144,6 +144,7 @@ git clone git@github.com:Husseinhewehii/Independesk_task.git
 >> Update .env Database Credentials
 
 ``` bash
+    change APP_URL=http://localhost:8081 to APP_URL=http://localhost:8000
     change DB_HOST=db to DB_HOST=127.0.0.1
     change DB_USERNAME & DB_PASSWORD to yours
 ```
