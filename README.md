@@ -70,13 +70,13 @@ git clone https://github.com/Husseinhewehii/Independesk_task.git
 ```
 * ssh:
 ``` bash
-ssh: git clone git@github.com:Husseinhewehii/Independesk_task.git
+git clone git@github.com:Husseinhewehii/Independesk_task.git
 ```
 
 > Move To Project Directory
 
 ``` bash
-cd git@github.com:Husseinhewehii/Independesk_task.git
+    cd Independesk_task
 ```
 
 > Install Composer Packages
@@ -88,9 +88,9 @@ composer install
 > Create independesk_task database
 
 
-> You have 2 options for data:
-* Import independesk_task.sql to Database
-* Use Laravel Seeder
+# You have 2 options for data:
+* Option 1: Import independesk_task.sql to Database
+* Option 2: Use Laravel Seeder
 ``` bash
 php artisan db:seed
 ```
