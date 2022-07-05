@@ -127,10 +127,10 @@ php artisan db:seed
 php artisan migrate --seed
 ```
 
->> Run On Local Machine
+>> Go To 
 
 ``` bash
-http://localhost:8080/
+http://localhost:8080/home
 ```
 
 ## Option 2 Installation
@@ -192,4 +192,10 @@ php artisan migrate --seed
 
 ``` bash
 php artisan serve
+```
+
+>> Go To 
+
+``` bash
+http://localhost:8000/home
 ```
