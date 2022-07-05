@@ -26,7 +26,3 @@ trait EmployeesRelationTrait{
         return $this->belongsToMany(Employee::class, self::$employees_relation_table);
     }
 }
-
-
-// select * from `employees` where id NOT IN 
-// (SELECT employees.id FROM employees LEFT join `division_employees` on `division_employees`.`employee_id` = `employees`.`id` where `division_employees`.`division_id` = 2);
