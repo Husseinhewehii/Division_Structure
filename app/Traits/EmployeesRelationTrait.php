@@ -8,10 +8,9 @@ trait EmployeesRelationTrait{
 
     public function notEmployees()
     {
-        return Employee::leftJoin(self::$employees_relation_table , self::$employees_relation_table.".employee_id", '=', 'employees.id')
-        ->select("employees.*")
-        ->where(self::$employees_relation_table.".".self::$pivot_key, "!=", $this->id)
-        ->orWhere(self::$employees_relation_table.".".self::$pivot_key, null);
+        return Employee::whereNot('id', $this->leader)
+        ->whereRaw(sprintf("id NOT IN (SELECT employees.id FROM employees LEFT join %s on %s.`employee_id` = `employees`.`id` where %s.%s = %s)", self::$employees_relation_table, self::$employees_relation_table, self::$employees_relation_table, self::$pivot_key, $this->id))
+        ->get();
     }
 
     public function leaderEmployee()
@@ -24,3 +23,7 @@ trait EmployeesRelationTrait{
         return $this->belongsToMany(Employee::class, self::$employees_relation_table);
     }
 }
+
+
+// select * from `employees` where id NOT IN 
+// (SELECT employees.id FROM employees LEFT join `division_employees` on `division_employees`.`employee_id` = `employees`.`id` where `division_employees`.`division_id` = 2);
