@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Division;
 
-
-interface DivisionRepositoryInterface{
+interface DivisionRepositoryInterface
+{
     public function getDivisions();
 }

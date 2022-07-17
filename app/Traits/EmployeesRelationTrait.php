@@ -4,8 +4,8 @@ namespace App\Traits;
 
 use App\Models\Employee;
 
-trait EmployeesRelationTrait{
-
+trait EmployeesRelationTrait
+{
     public function notEmployees()
     {
         $pivotTable = self::$employees_relation_table;

@@ -17,10 +17,10 @@ class DivisionFactory extends Factory
      */
     public function definition()
     {
-        $employees = Employee::pluck("id");
+        $employees = Employee::pluck('id');
 
         return [
-            'name' => $this->faker->name()." division",
+            'name' => $this->faker->name().' division',
             'leader' => $employees->random(),
         ];
     }

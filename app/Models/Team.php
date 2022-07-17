@@ -11,5 +11,6 @@ class Team extends Model
     use HasFactory, EmployeesRelationTrait;
 
     private static $employees_relation_table = 'team_employees';
+
     private static $pivot_key = 'team_id';
 }

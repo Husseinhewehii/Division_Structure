@@ -18,11 +18,11 @@ class DepartmentFactory extends Factory
      */
     public function definition()
     {
-        $employees = Employee::pluck("id");
-        $divisions = Division::pluck("id");
+        $employees = Employee::pluck('id');
+        $divisions = Division::pluck('id');
 
         return [
-            'name' => $this->faker->name()." department",
+            'name' => $this->faker->name().' department',
             'leader' => $employees->random(),
             'division_id' => $divisions->random(),
         ];

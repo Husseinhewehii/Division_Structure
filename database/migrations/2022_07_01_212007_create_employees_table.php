@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string("firstName");
-            $table->string("lastName");
+            $table->string('firstName');
+            $table->string('lastName');
             $table->timestamps();
         });
     }

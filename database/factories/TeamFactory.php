@@ -18,11 +18,11 @@ class TeamFactory extends Factory
      */
     public function definition()
     {
-        $employees = Employee::pluck("id");
-        $departments = Department::pluck("id");
+        $employees = Employee::pluck('id');
+        $departments = Department::pluck('id');
 
         return [
-            'name' => $this->faker->name()." team",
+            'name' => $this->faker->name().' team',
             'leader' => $employees->random(),
             'department_id' => $departments->random(),
         ];

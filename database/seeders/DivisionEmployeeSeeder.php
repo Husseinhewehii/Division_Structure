@@ -3,9 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Division;
-use App\Models\DivisionEmployee;
-use App\Models\Employee;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DivisionEmployeeSeeder extends Seeder

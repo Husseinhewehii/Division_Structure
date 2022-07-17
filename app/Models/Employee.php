@@ -20,7 +20,7 @@ class Employee extends Model
     protected function fullName(): Attribute
     {
         return Attribute::make(
-            get: fn () => $this->firstName." ".$this->lastName,
+            get: fn () => $this->firstName.' '.$this->lastName,
         );
     }
-}   
+}

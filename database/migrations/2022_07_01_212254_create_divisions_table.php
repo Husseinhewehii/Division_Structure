@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('divisions', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->foreignId('leader')->references("id")->on('employees');
+            $table->string('name');
+            $table->foreignId('leader')->references('id')->on('employees');
             $table->timestamps();
         });
     }
