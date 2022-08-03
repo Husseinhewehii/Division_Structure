@@ -7,10 +7,10 @@ if (! function_exists('assets')) {
     }
 }
 
- if (! function_exists('seed_organization_with_employees')) {
-     function seed_organization_with_employees($model)
-     {
-         $organizations = $model::all();
-         $organizations->each(fn ($organization) => $organization->employees()->attach($organization->notEmployees()->random(rand(3, 8))));
-     }
- }
+if (! function_exists('seed_organization_with_employees')) {
+    function seed_organization_with_employees($model)
+    {
+        $organizations = $model::all();
+        $organizations->each(fn ($organization) => $organization->employees()->attach($organization->notEmployees()->random(rand(3, 8))));
+    }
+}
