@@ -19,3 +19,11 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('add',[CarController::class, 'create']);
+Route::post('add',[CarController::class, 'store']);
+Route::get('car',[CarController::class, 'index']);
+Route::get('edit/{id}',[CarController::class, 'edit'])->name("car.edit");
+Route::post('edit/{id}',[CarController::class, 'update']);
+Route::delete('{id}',[CarController::class, 'destroy'])->name("car.destroy");
