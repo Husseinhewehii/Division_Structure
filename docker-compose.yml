@@ -62,11 +62,28 @@ services:
     container_name: phpmyadmin
     restart: unless-stopped
     ports: 
-      - 8081:80
+      - 8082:80
     environment:
       - PMA_ARBITRARY=1
     networks:
       - app-network
+
+  #mongo
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: unless-stopped
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodata:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
+
+    networks:
+      - app-network
+
  
 #Docker Networks
 networks:
@@ -75,4 +92,6 @@ networks:
 #Volumes
 volumes:
   dbdata:
+    driver: local
+  mongodata:
     driver: local
